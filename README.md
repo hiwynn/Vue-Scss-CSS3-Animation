@@ -31,8 +31,7 @@
 Scale 缩放|animation-scale
 Widen 变宽|animation-scale
 Fall 下落|animation-widen
-Rotate1 旋转1|animation-rotate1
-Rotate2 旋转2|animation-rotate2
+Rotate 旋转|animation-rotate
 Appear 渐显|animation-appear
 
 > 目前能允许的最大行数和列数均是20，如果需要增加可以修改 `sass/animation.scss` 中 `$maxColumnAmount` 和 `$maxRowAmount` 的值。

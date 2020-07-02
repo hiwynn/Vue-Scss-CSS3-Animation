@@ -57,38 +57,19 @@ $maxRowAmount: 20;
   }
 }
 
-.animation-rotate1 {
+.animation-rotate {
   @for $i from 0 through $maxColumnAmount {
     .column-#{$i} {
       @for $j from 0 through $maxRowAmount {
         .row-#{$j} {
-          animation: rotate1 ($i+$j+0.6)*0.3+s;
+          animation: rotate ($i+$j+0.6)*0.3+s;
         }
       }
     }
   }
 }
 
-@keyframes rotate1 {
-  0% {
-    transform: rotate3d(50, 50, 50, 200deg);
-    opacity: 0;
-  }
-}
-
-.animation-rotate2 {
-  @for $i from 0 through $maxColumnAmount {
-    .column-#{$i} {
-      @for $j from 0 through $maxRowAmount {
-        .row-#{$j} {
-          animation: rotate2 ($i+$j+0.6)*0.3+s;
-        }
-      }
-    }
-  }
-}
-
-@keyframes rotate2 {
+@keyframes rotate {
   0% {
     transform: rotate3d(1, 1, 1, 100deg) scale(0);
     opacity: 0;

@@ -45,12 +45,9 @@
                         <span slot="title">Fall 下落</span>
                     </el-menu-item>
                     <el-menu-item index="4">
-                        <span slot="title">Rotate1 旋转1</span>
+                        <span slot="title">Rotate 旋转</span>
                     </el-menu-item>
                     <el-menu-item index="5">
-                        <span slot="title">Rotate2 旋转2</span>
-                    </el-menu-item>
-                    <el-menu-item index="6">
                         <span slot="title">Appear 渐显</span>
                     </el-menu-item>
                 </el-menu>
@@ -86,7 +83,7 @@
                     </el-col>
                 </el-row>
 
-                <el-row class="animation-rotate1" v-if="currentIndex == 4">
+                <el-row class="animation-rotate" v-if="currentIndex == 4">
                     <el-col :span="5" :class="'column-'+ columnIndex"
                             v-for="(column, columnIndex) in data">
                         <div class="item"
@@ -96,17 +93,7 @@
                     </el-col>
                 </el-row>
 
-                <el-row class="animation-rotate2" v-if="currentIndex == 5">
-                    <el-col :span="5" :class="'column-'+ columnIndex"
-                            v-for="(column, columnIndex) in data">
-                        <div class="item"
-                             :class="'row-'+ index "
-                             v-for="(item, index) in column">{{ item }}
-                        </div>
-                    </el-col>
-                </el-row>
-
-                <el-row class="animation-appear" v-if="currentIndex == 6">
+                <el-row class="animation-appear" v-if="currentIndex == 5">
                     <el-col :span="5" :class="'column-'+ columnIndex"
                             v-for="(column, columnIndex) in data">
                         <div class="item"
