@@ -1,5 +1,5 @@
 ### 运行
-1. 在根目录下执行 `sass sass/animation.scss:css/index.css`
+1. 在根目录下执行 `sass sass/animation.scss:index.css`
 2. 运行根目录下的 `index.html`
 
 ### 数据需要以这样的方式排列（每一列的数据放在一个数组中，所有的列组成外层的数组）：
