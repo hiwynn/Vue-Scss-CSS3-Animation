@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .el-header {
+            background-color: #B3C0D1;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        .item {
+            background: #e5e9f2;
+            height: 50px;
+            line-height: 50px;
+            margin: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <el-container>
+        <el-header>CSS3 Animation</el-header>
+        <el-container>
+            <el-aside width="160px">
+                <el-menu
+                        default-active="1"
+                        class="el-menu-vertical-demo"
+                        @select="handleSelect">
+                    <el-menu-item index="1">
+                        <span slot="title">Scale 缩放</span>
+                    </el-menu-item>
+                    <el-menu-item index="2">
+                        <span slot="title">Widen 变宽</span>
+                    </el-menu-item>
+                    <el-menu-item index="3">
+                        <span slot="title">Fall 下落</span>
+                    </el-menu-item>
+                    <el-menu-item index="4">
+                        <span slot="title">Rotate1 旋转1</span>
+                    </el-menu-item>
+                    <el-menu-item index="5">
+                        <span slot="title">Rotate2 旋转2</span>
+                    </el-menu-item>
+                    <el-menu-item index="6">
+                        <span slot="title">Appear 渐显</span>
+                    </el-menu-item>
+                </el-menu>
+            </el-aside>
+            <el-main>
+                <el-row class="animation-scale" v-if="currentIndex == 1">
+                    <el-col :span="5" :class="'column-'+ columnIndex"
+                            v-for="(column, columnIndex) in data">
+                        <div class="item"
+                             :class="'row-'+ index "
+                             v-for="(item, index) in column">{{ item }}
+                        </div>
+                    </el-col>
+                </el-row>
+
+                <el-row class="animation-widen" v-if="currentIndex == 2">
+                    <el-col :span="5" :class="'column-'+ columnIndex"
+                            v-for="(column, columnIndex) in data">
+                        <div class="item"
+                             :class="'row-'+ index "
+                             v-for="(item, index) in column">{{ item }}
+                        </div>
+                    </el-col>
+                </el-row>
+
+                <el-row class="animation-fall" v-if="currentIndex == 3">
+                    <el-col :span="5" :class="'column-'+ columnIndex"
+                            v-for="(column, columnIndex) in data">
+                        <div class="item"
+                             :class="'row-'+ index "
+                             v-for="(item, index) in column">{{ item }}
+                        </div>
+                    </el-col>
+                </el-row>
+
+                <el-row class="animation-rotate1" v-if="currentIndex == 4">
+                    <el-col :span="5" :class="'column-'+ columnIndex"
+                            v-for="(column, columnIndex) in data">
+                        <div class="item"
+                             :class="'row-'+ index "
+                             v-for="(item, index) in column">{{ item }}
+                        </div>
+                    </el-col>
+                </el-row>
+
+                <el-row class="animation-rotate2" v-if="currentIndex == 5">
+                    <el-col :span="5" :class="'column-'+ columnIndex"
+                            v-for="(column, columnIndex) in data">
+                        <div class="item"
+                             :class="'row-'+ index "
+                             v-for="(item, index) in column">{{ item }}
+                        </div>
+                    </el-col>
+                </el-row>
+
+                <el-row class="animation-appear" v-if="currentIndex == 6">
+                    <el-col :span="5" :class="'column-'+ columnIndex"
+                            v-for="(column, columnIndex) in data">
+                        <div class="item"
+                             :class="'row-'+ index "
+                             v-for="(item, index) in column">{{ item }}
+                        </div>
+                    </el-col>
+                </el-row>
+            </el-main>
+        </el-container>
+    </el-container>
+</div>
+</body>
+<script>
+	new Vue({
+		el: '#app',
+		data: function () {
+			return {
+				visible: false,
+				currentIndex: 1,
+				data: [
+					['Row 1 Column 1', 'Row 2 Column 1', 'Row 3 Column 1'],
+					['Row 1 Column 2', 'Row 2 Column 2', 'Row 3 Column 2'],
+					['Row 1 Column 3', 'Row 2 Column 3', 'Row 3 Column 3'],
+					['Row 1 Column 4', 'Row 2 Column 4', 'Row 3 Column 4']
+				]
+			}
+		},
+		methods: {
+			handleSelect(key, keyPath) {
+				this.currentIndex = key;
+			}
+		}
+	})
+</script>
+</html>

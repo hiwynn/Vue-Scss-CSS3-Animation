@@ -1,0 +1,116 @@
+$maxColumnAmount: 20;
+$maxRowAmount: 20;
+.animation-scale {
+  @for $i from 0 through $maxColumnAmount {
+    .column-#{$i} {
+      @for $j from 0 through $maxRowAmount {
+        .row-#{$j} {
+          animation: scale ($i+$j+0.6)*0.3+s;
+        }
+      }
+    }
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.animation-widen {
+  @for $i from 0 through $maxColumnAmount {
+    .column-#{$i} {
+      @for $j from 0 through $maxRowAmount {
+        .row-#{$j} {
+          animation: widen ($i+$j+0.6)*0.3+s;
+        }
+      }
+    }
+  }
+}
+
+@keyframes widen {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+}
+
+.animation-fall {
+  @for $i from 0 through $maxColumnAmount {
+    .column-#{$i} {
+      @for $j from 0 through $maxRowAmount {
+        .row-#{$j} {
+          animation: fall ($i+$j+0.6)*0.3+s;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-150px);
+    opacity: 0;
+  }
+}
+
+.animation-rotate1 {
+  @for $i from 0 through $maxColumnAmount {
+    .column-#{$i} {
+      @for $j from 0 through $maxRowAmount {
+        .row-#{$j} {
+          animation: rotate1 ($i+$j+0.6)*0.3+s;
+        }
+      }
+    }
+  }
+}
+
+@keyframes rotate1 {
+  0% {
+    transform: rotate3d(50, 50, 50, 200deg);
+    opacity: 0;
+  }
+}
+
+.animation-rotate2 {
+  @for $i from 0 through $maxColumnAmount {
+    .column-#{$i} {
+      @for $j from 0 through $maxRowAmount {
+        .row-#{$j} {
+          animation: rotate2 ($i+$j+0.6)*0.3+s;
+        }
+      }
+    }
+  }
+}
+
+@keyframes rotate2 {
+  0% {
+    transform: rotate3d(1, 1, 1, 100deg) scale(0);
+    opacity: 0;
+  }
+}
+
+.animation-appear {
+  @for $i from 0 through $maxColumnAmount {
+    .column-#{$i} {
+      @for $j from 0 through $maxRowAmount {
+        .row-#{$j} {
+          overflow: hidden;
+          animation: appear ($i+$j+0.6)*0.3+s;
+        }
+      }
+    }
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+}
