@@ -1,6 +1,6 @@
 $maxColumnAmount: 20;
 $maxRowAmount: 20;
-.animation-scale {
+.facility-scale {
   @for $i from 0 through $maxColumnAmount {
     .column-#{$i} {
       @for $j from 0 through $maxRowAmount {
@@ -19,7 +19,7 @@ $maxRowAmount: 20;
   }
 }
 
-.animation-widen {
+.facility-widen {
   @for $i from 0 through $maxColumnAmount {
     .column-#{$i} {
       @for $j from 0 through $maxRowAmount {
@@ -38,7 +38,7 @@ $maxRowAmount: 20;
   }
 }
 
-.animation-fall {
+.facility-fall {
   @for $i from 0 through $maxColumnAmount {
     .column-#{$i} {
       @for $j from 0 through $maxRowAmount {
@@ -57,7 +57,7 @@ $maxRowAmount: 20;
   }
 }
 
-.animation-rotate {
+.facility-rotate {
   @for $i from 0 through $maxColumnAmount {
     .column-#{$i} {
       @for $j from 0 through $maxRowAmount {
@@ -76,7 +76,7 @@ $maxRowAmount: 20;
   }
 }
 
-.animation-appear {
+.facility-appear {
   @for $i from 0 through $maxColumnAmount {
     .column-#{$i} {
       @for $j from 0 through $maxRowAmount {

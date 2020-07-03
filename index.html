@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
     <!-- 引入组件库 -->
     <script src="https://unpkg.com/element-ui/lib/index.js"></script>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="fcltAnimation.css">
     <style>
         .el-header {
             background-color: #B3C0D1;
@@ -53,7 +53,7 @@
                 </el-menu>
             </el-aside>
             <el-main>
-                <el-row class="animation-scale" v-if="currentIndex == 1">
+                <el-row class="facility-scale" v-if="currentIndex == 1">
                     <el-col :span="5" :class="'column-'+ columnIndex"
                             v-for="(column, columnIndex) in data">
                         <div class="item"
@@ -63,7 +63,7 @@
                     </el-col>
                 </el-row>
 
-                <el-row class="animation-widen" v-if="currentIndex == 2">
+                <el-row class="facility-widen" v-if="currentIndex == 2">
                     <el-col :span="5" :class="'column-'+ columnIndex"
                             v-for="(column, columnIndex) in data">
                         <div class="item"
@@ -73,7 +73,7 @@
                     </el-col>
                 </el-row>
 
-                <el-row class="animation-fall" v-if="currentIndex == 3">
+                <el-row class="facility-fall" v-if="currentIndex == 3">
                     <el-col :span="5" :class="'column-'+ columnIndex"
                             v-for="(column, columnIndex) in data">
                         <div class="item"
@@ -83,7 +83,7 @@
                     </el-col>
                 </el-row>
 
-                <el-row class="animation-rotate" v-if="currentIndex == 4">
+                <el-row class="facility-rotate" v-if="currentIndex == 4">
                     <el-col :span="5" :class="'column-'+ columnIndex"
                             v-for="(column, columnIndex) in data">
                         <div class="item"
@@ -93,7 +93,7 @@
                     </el-col>
                 </el-row>
 
-                <el-row class="animation-appear" v-if="currentIndex == 5">
+                <el-row class="facility-appear" v-if="currentIndex == 5">
                     <el-col :span="5" :class="'column-'+ columnIndex"
                             v-for="(column, columnIndex) in data">
                         <div class="item"
