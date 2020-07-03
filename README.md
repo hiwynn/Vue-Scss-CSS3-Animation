@@ -29,8 +29,8 @@
 动画|类的名称
 :-|:-
 Scale 缩放|facility-scale
-Widen 变宽|facility-scale
-Fall 下落|facility-widen
+Widen 变宽|facility-widen
+Fall 下落|facility-fall
 Rotate 旋转|facility-rotate
 Appear 渐显|facility-appear
 
